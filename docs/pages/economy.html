@@ -3,210 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WoSSystems Documentation</title>
+  <title>Documentation | Economy</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #343a40;
-      color: #f8f9fa;
-    }
-    h1, h2, h3 {
-      color: #f8f9fa;
-    }
-    table {
-      background-color: #495057;
-    }
-    table th {
-      background-color: #6c757d;
-    }
-    a {
-      color: #0d6efd;
-    }
-    a:hover {
-      color: #0a58ca;
-    }
-  </style>
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body class="container my-4">
-<h1 class="text-center mb-4">WoSSystems Documentation</h1>
+<body class="dark-mode">
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3 col-lg-2 bg-dark text-white min-vh-100 p-4">
+      <h2 class="mb-4">Documentation</h2>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="../index.html" class="nav-link text-white">Home</a></li>
+        <h3 class="mb-3">Features</h3>
+        <li class="nav-item mb-2"><a href="channels.html" class="nav-link text-white">Channels</a></li>
+        <li class="nav-item mb-2"><a href="cosmetics.html" class="nav-link text-white">Cosmetics</a></li>
+        <li class="nav-item mb-2"><a href="" class="nav-link text-white">Economy</a></li>
+        <li class="nav-item mb-2"><a href="time.html" class="nav-link text-white">Time</a></li>
+        <h3 class="mb-3">Game Design</h3>
+        <li class="nav-item mb-2"><a href="crafting.html" class="nav-link text-white">Crafting</a></li>
+        <li class="nav-item mb-2"><a href="fishing.html" class="nav-link text-white">Fishing</a></li>
+        <li class="nav-item mb-2"><a href="citems.html" class="nav-link text-white">Citems</a></li>
+        <li class="nav-item mb-2"><a href="guis.html" class="nav-link text-white">GUIs</a></li>
+        <li class="nav-item mb-2"><a href="interactions.html" class="nav-link text-white">Interactions</a></li>
+        <li class="nav-item mb-2"><a href="loottables.html" class="nav-link text-white">Loottables</a></li>
+        <li class="nav-item mb-2"><a href="stats.html" class="nav-link text-white">Stats</a></li>
+        <li class="nav-item mb-2"><a href="unlockables.html" class="nav-link text-white">Unlockables</a></li>
+      </ul>
+    </div>
 
-<h2>Table of Contents</h2>
-<ul>
-  <li><a href="#Economy">Economy</a></li>
-</ul>
+    <!-- Main Content -->
+    <div class="col-md-9 col-lg-10 p-4">
+      <h1 class="text-center mb-4">Economy Documentation</h1>
 
-<h2 id="Economy">Economy</h2>
-<h3>Commands</h3>
+      <!-- Economy Section -->
+      <div class="section" id="economy">
 
-<p><code>/eco subcommand parameters</code></p>
+        <!-- /eco Command -->
+        <div class="command">
+          <h3><code>/eco subcommand parameters</code></h3>
+          <p>Modify a player's currency using various subcommands.</p>
+          <table class="table table-striped table-dark">
+            <thead>
+            <tr>
+              <th>Subcommand</th>
+              <th>Example</th>
+              <th>Permissions</th>
+              <th>Function</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td><strong>give</strong> player currency amount</td>
+              <td><code>HektorTM gold 1</code></td>
+              <td><code>economy.modify.give</code></td>
+              <td>Give a player a currency</td>
+            </tr>
+            <tr>
+              <td><strong>take</strong> player currency amount</td>
+              <td><code>HektorTM gold 1</code></td>
+              <td><code>economy.modify.take</code></td>
+              <td>Takes currency from a player</td>
+            </tr>
+            <tr>
+              <td><strong>set</strong> player currency amount</td>
+              <td><code>HektorTM gold 1</code></td>
+              <td><code>economy.modify.set</code></td>
+              <td>Set a player's currency</td>
+            </tr>
+            <tr>
+              <td><strong>reset</strong> player currency</td>
+              <td><code>HektorTM gold</code></td>
+              <td><code>economy.modify.reset</code></td>
+              <td>Reset a player's currency</td>
+            </tr>
+            <tr>
+              <td><strong>random</strong> player currency min max</td>
+              <td><code>HektorTM gold 1 30</code></td>
+              <td><code>economy.modify.random</code></td>
+              <td>Give a player a random amount between min and max</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
 
-<table class="table table-striped table-dark">
-  <thead>
-  <tr>
-    <th>Subcommand</th>
-    <th>Example</th>
-    <th>Permissions</th>
-    <th>Function</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td><strong>give</strong> player currency amount</td>
-    <td>HektorTM gold 1</td>
-    <td>economy.modify.give</td>
-    <td>Give a player a currency</td>
-  </tr>
-  <tr>
-    <td><strong>take</strong> player currency amount</td>
-    <td>HektorTM gold 1</td>
-    <td>economy.modify.take</td>
-    <td>Takes currency from a player</td>
-  </tr>
-  <tr>
-    <td><strong>set</strong> player currency amount</td>
-    <td>HektorTM gold 1</td>
-    <td>economy.modify.set</td>
-    <td>Set a player's currency</td>
-  </tr>
-  <tr>
-    <td><strong>reset</strong> player currency</td>
-    <td>HektorTM gold</td>
-    <td>economy.modify.reset</td>
-    <td>Reset a player's currency</td>
-  </tr>
-  <tr>
-    <td><strong>random</strong> player currency min max</td>
-    <td>HektorTM gold 1 30</td>
-    <td>economy.modify.random</td>
-    <td>Give a player a random amount between min and max</td>
-  </tr>
-  </tbody>
-</table>
+        <!-- /pay Command -->
+        <div class="command">
+          <h3><code>/pay player currency amount</code></h3>
+          <p>Pay another player a specific amount of currency.</p>
+          <table class="table table-striped table-dark">
+            <thead>
+            <tr>
+              <th>Example</th>
+              <th>Function</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td><code>HektorTM gold 10</code></td>
+              <td>Pay a player a currency</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
 
-<hr>
+        <!-- /balance Command -->
+        <div class="command">
+          <h3><code>/balance player</code></h3>
+          <p>View your own or another player's currency balance.</p>
+          <table class="table table-striped table-dark">
+            <thead>
+            <tr>
+              <th>Parameters</th>
+              <th>Permissions</th>
+              <th>Function</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td><code>balance HektorTM</code></td>
+              <td><code>economy.balance.self</code>, <code>economy.balance.others</code></td>
+              <td>View your own or a player's currency</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
 
-<p><code>/pay player currency amount</code></p>
+        <!-- /coinflip Command -->
+        <div class="command">
+          <h3><code>/coinflip amount(in gold) heads/tails</code></h3>
+          <p>Create a coinflip challenge with a specified amount of currency.</p>
+          <table class="table table-striped table-dark">
+            <thead>
+            <tr>
+              <th>Parameters</th>
+              <th>Permissions</th>
+              <th>Function</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td><code>10 heads</code></td>
+              <td><code>economy.coinflip</code></td>
+              <td>Creates a coinflip challenge</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<table class="table table-striped table-dark">
-  <thead>
-  <tr>
-    <th>Example</th>
-    <th>Function</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>HektorTM gold 10</td>
-    <td>Pay a player a currency</td>
-  </tr>
-  </tbody>
-</table>
 
-<hr>
-
-<p><code>/balance player</code></p>
-
-<table class="table table-striped table-dark">
-  <thead>
-  <tr>
-    <th>Parameters</th>
-    <th>Permissions</th>
-    <th>Function</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>balance HektorTM</td>
-    <td>economy.balance.self, economy.balance.others</td>
-    <td>View your own or a player's currency</td>
-  </tr>
-  </tbody>
-</table>
-
-<hr>
-
-<p><code>/coinflip amount(in gold) heads/tails</code></p>
-
-<table class="table table-striped table-dark">
-  <thead>
-  <tr>
-    <th>Parameters</th>
-    <th>Permissions</th>
-    <th>Function</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>10 heads</td>
-    <td>economy.coinflip</td>
-    <td>Creates a coinflip challenge</td>
-  </tr>
-  </tbody>
-</table>
-
-<h2 id="Systems">Systems</h2>
-
-<h3>Citems</h3>
-
-<p><code>/citem</code></p>
-
-<p><strong>Flags:</strong></p>
-<ul>
-  <li>Unusable</li>
-  <li>Undroppable</li>
-  <li>Hide</li>
-</ul>
-
-<table class="table table-striped table-dark">
-  <thead>
-  <tr>
-    <th>Subcommands</th>
-    <th>Permissions</th>
-    <th>Function</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td><strong>rename</strong> newName</td>
-    <td>citem.modify.rename</td>
-    <td>Set name of item</td>
-  </tr>
-  <tr>
-    <td><strong>lore</strong> add/remove/edit</td>
-    <td>citem.modify.lore</td>
-    <td>Edit/add/remove lore</td>
-  </tr>
-  <tr>
-    <td><strong>flag</strong> add/remove</td>
-    <td>citem.modify.flags</td>
-    <td>Add/remove flag</td>
-  </tr>
-  <tr>
-    <td><strong>action</strong> right/left interactionID</td>
-    <td>citem.modify.actions</td>
-    <td>Add actions to right/left click</td>
-  </tr>
-  <tr>
-    <td><strong>save</strong> ID</td>
-    <td>citem.save</td>
-    <td>Save a citem</td>
-  </tr>
-  <tr>
-    <td><strong>update</strong> ID</td>
-    <td>citem.update</td>
-    <td>Update a citem</td>
-  </tr>
-  <tr>
-    <td><strong>tag</strong> tagID</td>
-    <td>citem.tag</td>
-    <td>Add tags</td>
-  </tr>
-  <tr>
-    <td><strong>info</strong></td>
-    <td>citem.info</td>
-    <td>View a Citem's information</td>
-  </tr>
-  </tbody>
-</table>
+</div>
 </body>
 </html>
